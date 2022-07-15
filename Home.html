@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<script>
+			function OpenBookForm(poster) {
+				document.forms.homeForm.submit();
+			}
+			
+		</script>
+	</head>
+	<body><form name="homeForm" action="book.html" method="post" target="_self">
+		<style>
+			body {
+				background-image: url("images\paper.gif");
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.heading {
+				font-color:#00FF00;
+				text-align: center;
+				text-decoration: none;
+				font-size: 50px;
+				style-height:120px;
+				height:70px;
+				width:100%;
+			}
+				.topnav {
+				overflow: hidden;
+				background-color: #333;
+				width: 100%;
+				height: 50px;
+			}
+			.topnav a {
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 1% 3%;
+				text-decoration: none;
+				font-size: 20px;
+			}
+			.topnav a.active {
+				background-color: #4CAF50;
+				color: white;
+			}
+			.topnav a:hover {
+				background-color: #ddd;
+				color: black;
+			}		
+			.mySlides {
+				align: center;
+				display: none;
+				width: 1000px;
+				height: 400px;
+				margin:0px 0px;
+			}
+			.movieGrid {
+			width:100%;
+			height:30%; 
+			padding:1% 1%;
+		}
+		.imagerows {
+			height:400px;
+			padding-left:5px;
+			padding-right:5px;
+			width:270px;
+		}
+		.leftbtn{
+			background-color: #4CAF50;
+			color: White;
+			padding: 12px 20px;
+			margin: 150px 0px;
+			border: none;
+			cursor: pointer;
+			opacity: 0.9;
+			float:left;
+		}
+		.rightbtn{
+			background-color: #4CAF50;
+			color: White;
+			padding: 12px 20px;
+			margin: 150px 0px;
+			border: none;
+			cursor: pointer;
+			opacity: 0.9;
+			float:right;
+		}
+		</style>
+		<div class="heading">
+			<img src="images\logo.jpg" width="200px" height="60px"/>
+			<font>Election  Comission Of India</font>
+		</div>
+		<div class="topnav">
+			<a class="active" href="home.html">Home |</a>
+			<a href="login.html">Sign In |</a>
+			<a  href="register.html">New Registration |</a>
+			<a href="cancel.html">Cancel |<a>
+		</div><br></br>
+	<div>
+    <center>
+	<input type="button" class="leftbtn" onclick="plusDivs(-1)" value="&#10094;"/> 
+		<input type="button" class="rightbtn" onclick="plusDivs(1)" value="&#10095;"/>
+		<img id="poster" class="mySlides" name="Dream girl" onclick="OpenBookForm(this)" src="images/dreamgirl.jpg" /> 
+		<img id="poster" class="mySlides" name="Kalank" onclick="OpenBookForm(this)" src="images/kalank.jpg" /> 
+		<img id="poster" class="mySlides" name="Bharat" onclick="OpenBookForm(this)" src="images/bharat-wide.jpg" /> 
+		<img id="poster" class="mySlides" name="Section-375" onclick="OpenBookForm(this)" src="images/section375.jpg" /> 
+		<img id="poster" class="mySlides" name="Ek-villain" onclick="OpenBookForm(this)" src="images/ek-villain.jpg"/> 
+	</center>
+	
+	</div>
+	<script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+	</script>
+	<center>
+	<div>
+		<div class="movieGrid">
+			<img id="poster" class="imagerows" name="Genius" onclick="OpenBookForm(this)" src="images/genius.jpg">
+			<img id="poster" class="imagerows" name="Robot 2.0" onclick="OpenBookForm(this)" src="images/robot2.jpg"/>
+			<img id="poster" class="imagerows" name="Raam-Leela" onclick="OpenBookForm(this)" src="images/ramleela.jpg"/> 
+			<img id="poster" class="imagerows" name="Thor" onclick="OpenBookForm(this)" src="images/thor.jpg"/>
+		</div>
+		<div class="movieGrid">
+			<img id="poster" class="imagerows" name="Junooniyat" onclick="OpenBookForm(this)" src="images/joononiyat.jpg"/> 
+			<img id="poster" class="imagerows" name="Raazi" onclick="OpenBookForm(this)" src="images/razi.jpg"/>
+			<img id="poster" class="imagerows" name="Avengers" onclick="OpenBookForm(this)" src="images/avengers.jpg"/> 
+			<img id="poster" class="imagerows" name="Kalank" onclick="OpenBookForm(this)" src="images/kalankfull.jpg"/>
+	</div>
+		<div class="movieGrid">
+			<img id="poster" class="imagerows" name="Rebel" onclick="OpenBookForm(this)" src="images/rebel.jpg"/ > 
+			<img id="poster" class="imagerows" name="October" onclick="OpenBookForm(this)" src="images/october.jpg"/> 
+			<img id="poster" class="imagerows" name="Raid" onclick="OpenBookForm(this)" src="images/raid.jpg" /> 
+			<img id="poster" class="imagerows" name="Raees" onclick="OpenBookForm(this)" src="images/raees.jpg" />
+		</div>
+	</div>	
+	</center>
+	</form></body>
+</html>
